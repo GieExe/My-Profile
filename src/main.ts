@@ -13,17 +13,14 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Veterinary Pet Shop Management System",
-    description:
-      "An offline solution for daily operations in veterinary clinics and pet shops, ensuring data reliability without internet.",
+    description: "An offline solution for daily operations in veterinary clinics and pet shops.",
     technologies: ["VB.NET", "MySQL", "Visual Studio"],
-    liveDemoLink:
-      "https://www.canva.com/design/DAFi5c44Z5s/C0t6PUsgFnAMCDUITgfFeg/view",
+    liveDemoLink: "https://www.canva.com/design/DAFi5c44Z5s/C0t6PUsgFnAMCDUITgfFeg/view",
     imagePlaceholder: "https://imgur.com/f6gpSdS.jpg"
   },
   {
     title: "Flask API for DB Management",
-    description:
-      "A CRUD-based API using PostgreSQL and Firebase for mobile and web integration.",
+    description: "A CRUD API using PostgreSQL and Firebase for mobile and web integration.",
     technologies: ["Python", "Flask", "PostgreSQL", "Firebase"],
     githubLink: "https://github.com/GieExe/Agreemo_API_V2",
     imagePlaceholder: "https://imgur.com/l8C0ESh.jpg"
@@ -37,36 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectsGrid = document.getElementById('projects-grid')
   if (!projectsGrid) return
 
-  projects.forEach((project) => {
-    const projectCard = document.createElement('div')
-    projectCard.className =
-      'bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all'
+  const menuBtn = document.getElementById("menu-toggle");
+  const menuList = document.getElementById("mobile-menu");
 
-    projectCard.innerHTML = `
+  menuBtn?.addEventListener("click", () => {
+    menuList?.classList.toggle("hidden");
+  });
+
+  projects.forEach((project) => {
+    const card = document.createElement('div')
+    card.className = 'bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all animate-fade-in-up'
+
+    card.innerHTML = `
       <img src="${project.imagePlaceholder}" alt="${project.title}" class="w-full h-48 object-cover rounded mb-4">
       <h3 class="text-xl font-semibold text-white mb-2">${project.title}</h3>
       <p class="text-gray-400 mb-4">${project.description}</p>
       <div class="flex flex-wrap gap-2 mb-4">
-        ${project.technologies
-          .map(
-            (tech) =>
-              `<span class="bg-blue-600 text-white px-2 py-0.5 text-xs rounded">${tech}</span>`
-          )
-          .join('')}
+        ${project.technologies.map(t => `<span class="bg-blue-600 text-white px-2 py-0.5 text-xs rounded">${t}</span>`).join('')}
       </div>
       <div class="flex gap-4">
-        ${
-          project.githubLink
-            ? `<a href="${project.githubLink}" target="_blank" class="text-blue-400 hover:underline">GitHub</a>`
-            : ''
-        }
-        ${
-          project.liveDemoLink
-            ? `<a href="${project.liveDemoLink}" target="_blank" class="text-blue-400 hover:underline">More Info</a>`
-            : ''
-        }
+        ${project.githubLink ? `<a href="${project.githubLink}" target="_blank" class="text-blue-400 hover:underline">GitHub</a>` : ''}
+        ${project.liveDemoLink ? `<a href="${project.liveDemoLink}" target="_blank" class="text-blue-400 hover:underline">More Info</a>` : ''}
       </div>
     `
-    projectsGrid.appendChild(projectCard)
+    projectsGrid.appendChild(card)
   })
 })
