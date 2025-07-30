@@ -1,5 +1,7 @@
-//C:\Users\Giebert\Desktop\Tito\my-portfolio\uno.config.ts
-import { defineConfig, presetUno, presetTypography } from 'unocss'
+// uno.config.ts
+import { defineConfig } from 'unocss'
+import presetUno from '@unocss/preset-uno'
+import presetTypography from '@unocss/preset-typography'
 
 export default defineConfig({
   presets: [
