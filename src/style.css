@@ -1,0 +1,49 @@
+/* src/style.css */
+
+/* Basic reset for consistent box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set a default font-family for the entire body */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Better font rendering on macOS */
+  -moz-osx-font-smoothing: grayscale; /* Better font rendering on macOS */
+}
+
+/* Ensure images don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below images */
+}
+
+/* Remove default margin from headings and paragraphs */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Remove list styles from unordered and ordered lists */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Improve accessibility for form elements */
+button, input, textarea, select {
+  font: inherit; /* Inherit font styles from parent */
+}
+
+/* Prevent text selection on elements that shouldn't be selectable */
+/* For example, if you have interactive elements where text selection might interfere */
+/* This is optional and depends on your specific design */
+/*
+[unselectable="on"] {
+  user-select: none;
+}
+*/
