@@ -79,4 +79,25 @@ document.addEventListener('DOMContentLoaded', () => {
             subtitle.style.opacity = '1';
         }, 500);
     }
+
+    // Hero avatar fallback: show SVG if local image missing
+    const heroPhoto = document.getElementById('hero-photo');
+    const svgAvatar = document.getElementById('svg-avatar');
+    if (heroPhoto && svgAvatar) {
+        // on error show svg
+        heroPhoto.addEventListener('error', () => {
+            heroPhoto.style.display = 'none';
+            svgAvatar.style.display = 'block';
+        });
+        // on load hide svg
+        heroPhoto.addEventListener('load', () => {
+            svgAvatar.style.display = 'none';
+            heroPhoto.style.display = 'block';
+        });
+        // quick check if image is not available
+        if (!heroPhoto.complete || heroPhoto.naturalWidth === 0) {
+            heroPhoto.style.display = 'none';
+            svgAvatar.style.display = 'block';
+        }
+    }
 });
