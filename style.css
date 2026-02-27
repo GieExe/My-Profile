@@ -367,6 +367,30 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
+/* Thumbnail subtle Ken Burns animation (plays on hover) */
+@keyframes kenburns {
+    0% { transform: scale(1) translateY(0); }
+    100% { transform: scale(1.06) translateY(-3%); }
+}
+.project-thumb-link img {
+    will-change: transform;
+    animation: kenburns 12s ease-in-out infinite alternate;
+    animation-play-state: paused;
+    transition: transform 0.35s ease;
+    display: block;
+}
+.project-card:hover .project-thumb-link img,
+.project-thumb-link:hover img {
+    animation-play-state: running;
+    transform: scale(1.03);
+}
+
+/* Ensure elements revealed by JS observer animate cleanly */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 .education-card .year {
     display: inline-block;
     font-size: 0.8rem;
@@ -466,4 +490,241 @@ footer {
     .container { padding: 0 1rem; }
     .hero-text h1 { font-size: 2rem; }
     .btn { width: 100%; text-align: center; }
+}
+
+/* ============================================================
+   PROJECT CARD VISUAL OVERHAUL
+   ============================================================ */
+
+/* Remove old kenburns inline override – now handled by .project-thumb */
+.project-thumb-link img { animation: none; }
+
+/* Thumbnail wrapper - clips overflow for zoom effect */
+.project-thumb-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
+    aspect-ratio: 16 / 9;
+    background: #0b1220;
+}
+
+/* The actual thumbnail image */
+.project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Overlay that appears on hover */
+.project-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,12,16,0.9) 0%, rgba(10,12,16,0.2) 60%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 16px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    gap: 6px;
+}
+
+.project-thumb-overlay i { font-size: 1rem; color: var(--primary); }
+
+/* Hover: zoom image + show overlay */
+.project-thumb-link:hover .project-thumb { transform: scale(1.06); }
+.project-thumb-link:hover .project-thumb-overlay { opacity: 1; }
+
+/* Project card: no overflow so we control per-section */
+.project-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 40px rgba(59,130,246,0.12);
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-primary);
+}
+
+.project-content .description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+/* Tags row */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+    margin-top: auto;
+}
+
+.project-tags span {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.65rem;
+    background: rgba(59,130,246,0.1);
+    color: var(--primary);
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Gallery / action buttons inside tags */
+.tag-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tag-btn:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--primary);
+}
+
+.tag-btn--live {
+    background: rgba(59,130,246,0.12);
+    color: var(--primary);
+    border-color: rgba(59,130,246,0.3);
+}
+
+.tag-btn--live:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* Barnyard details/summary accordion */
+.barnyard-details {
+    margin-top: 20px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.barnyard-details summary {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-primary);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s;
+}
+
+.barnyard-details summary::-webkit-details-marker { display: none; }
+
+.barnyard-details summary::before {
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--primary);
+    transition: transform 0.2s;
+}
+
+.barnyard-details[open] summary::before { transform: rotate(90deg); }
+.barnyard-details summary:hover { background: rgba(255,255,255,0.03); }
+
+.barnyard-details-body {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.barnyard-details-body h4 {
+    color: var(--text-primary);
+    margin: 1rem 0 0.4rem;
+    font-size: 0.95rem;
+}
+
+.barnyard-details-body ul { padding-left: 1.25rem; }
+.barnyard-details-body li { margin-bottom: 0.35rem; }
+
+/* Projects grid - 3 columns on wide screens */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Hobby section layout */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.project-card--large { box-shadow: none; }
+.hobby-feature .project-card { border-radius: 14px; overflow: hidden; }
+
+.hobby-meta { display:flex; justify-content:space-between; gap:1rem; margin-top:1rem; align-items:center; flex-wrap:wrap; }
+.hobby-stats { display:flex; flex-direction:column; gap:0.45rem; color:var(--text-secondary); font-size:0.9rem; }
+.hobby-stats div { display:flex; gap:0.6rem; align-items:center; }
+.hobby-stats strong { color:var(--text-primary); font-weight:700; width:88px; }
+
+.hobby-actions { display:flex; gap:0.6rem; }
+
+.hobby-aside .aside-card { background: var(--bg-surface); border:1px solid var(--border); padding:1.25rem; border-radius:12px; margin-bottom:1rem; }
+.aside-title { font-size:1rem; margin-bottom:0.5rem; color:var(--text-primary); }
+.aside-desc { color:var(--text-secondary); font-size:0.95rem; margin-bottom:0.75rem; }
+.aside-list { list-style:none; padding:0; margin:0 0 0.75rem 0; color:var(--text-secondary); }
+.aside-list li { font-size:0.9rem; margin-bottom:0.35rem; }
+.aside-links { display:flex; gap:0.5rem; }
+
+/* Tighten barnyard details inside aside */
+.hobby-aside .barnyard-details { margin-top:0; }
+
+@media (max-width: 900px) {
+    .hobby-grid { grid-template-columns: 1fr; }
+    .hobby-aside { order: 2; }
+    .hobby-feature { order: 1; }
+}
+
+@media (max-width: 640px) {
+    .project-thumb-overlay { opacity: 1; }
 }

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giebert Delotavo | Lead Systems Integration Engineer</title>
+    <title>Giebert Delotavo | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,15 +17,14 @@
             <div class="logo">GIEBERT</div>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
@@ -33,32 +32,284 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-image">
-                    <!-- Prefer local profile.jpg; fallback to SVG avatar if missing -->
                     <img id="hero-photo" src="https://i.imgur.com/fzONmaQ.jpg" alt="Giebert Delotavo" loading="lazy" aria-hidden="true">
                 </div>
                 <div class="hero-text">
                     <h1>Giebert R. Delotavo</h1>
-                    <p class="subtitle">Lead Systems Integration Engineer (Gov’t Projects)</p>
+                    <p class="subtitle">Full Stack Developer</p>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> 2340 Kapatiran Street, Barangay Commonwealth, Quezon City</p>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn primary">Get in Touch</a>
-                        <a href="#experience" class="btn secondary">View Experience</a>
+                        <a href="#projects" class="btn secondary">View Projects</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Objective & Profile</h2>
-            <div class="about-card">
-                <p class="mb-4">Full-Stack Systems Engineer specializing in hardware-integrated tracking solutions. I manage the complete lifecycle: planning architecture, optimizing hardware SDKs, handling project costing, and executing final deployment to ensure seamless, reliability-focused operations. <strong>Currently seeking part-time remote Web Developer roles.</strong></p>
-                
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- SparkTrack -->
+                <div class="project-card">
+                    <a href="#" class="project-thumb-link" data-gallery-trigger data-gallery="spark">
+                        <div class="project-thumb-wrap">
+                            <img class="project-thumb" src="Showcase_SparkTrack/coverpage.png" alt="SparkTrack Cover">
+                            <div class="project-thumb-overlay"><i class="fas fa-images"></i> View Gallery</div>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3>SparkTrack — Document &amp; Asset Tracking</h3>
+                        <p class="description">Architected a real-time enterprise tracking system monitoring asset locations across rooms, with seamless IoT hardware sensor integration deployed to national government agencies.</p>
+                        <div class="project-tags">
+                            <span>C# / .NET</span>
+                            <span>IoT Integration</span>
+                            <span>Real-time</span>
+                            <a href="#" class="tag-btn" data-gallery-trigger data-gallery="spark"><i class="fas fa-images"></i> Gallery</a>
+                        </div>
+                    </div>
+                    <div class="spark-gallery" style="display:none;">
+                        <img data-src="Showcase_SparkTrack/coverpage.png" alt="Cover">
+                        <img data-src="Showcase_SparkTrack/value-proposition.png" alt="Value Proposition">
+                        <img data-src="Showcase_SparkTrack/discovering-the-problem.png" alt="Discovering the Problem">
+                        <img data-src="Showcase_SparkTrack/how-it-works.png" alt="How it Works">
+                        <img data-src="Showcase_SparkTrack/core-capabilities.png" alt="Core Capabilities">
+                        <img data-src="Showcase_SparkTrack/security-and-enterprise-readiness.png" alt="Security & Enterprise Readiness">
+                        <img data-src="Showcase_SparkTrack/use-cases-and-close.png" alt="Use Cases & Close">
+                    </div>
+                </div>
+
+                <!-- Veterinary -->
+                <div class="project-card">
+                    <a href="#" class="project-thumb-link" data-gallery-trigger data-gallery="veterinary">
+                        <div class="project-thumb-wrap">
+                            <img class="project-thumb" src="Showcase_Veterinary/veterinary-1.png" alt="Veterinary Cover">
+                            <div class="project-thumb-overlay"><i class="fas fa-images"></i> View Gallery</div>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3>Veterinary Pet Shop Management</h3>
+                        <p class="description">A VB.NET clinic management system with appointments, medical records, inventory tracking, and billing — built to streamline daily operations for veterinary clinics.</p>
+                        <div class="project-tags">
+                            <span>VB.NET</span>
+                            <span>SQL</span>
+                            <a href="#" class="tag-btn" data-gallery-trigger data-gallery="veterinary"><i class="fas fa-images"></i> Gallery</a>
+                        </div>
+                    </div>
+                    <div class="veterinary-gallery" style="display:none;">
+                        <img data-src="Showcase_Veterinary/veterinary-1.png" alt="1">
+                        <img data-src="Showcase_Veterinary/veterinary-2.png" alt="2">
+                        <img data-src="Showcase_Veterinary/veterinary-3.png" alt="3">
+                        <img data-src="Showcase_Veterinary/veterinary-4.png" alt="4">
+                        <img data-src="Showcase_Veterinary/veterinary-5.png" alt="5">
+                        <img data-src="Showcase_Veterinary/veterinary-6.png" alt="6">
+                        <img data-src="Showcase_Veterinary/veterinary-7.png" alt="7">
+                        <img data-src="Showcase_Veterinary/veterinary-8.png" alt="8">
+                        <img data-src="Showcase_Veterinary/veterinary-9.png" alt="9">
+                        <img data-src="Showcase_Veterinary/veterinary-10.png" alt="10">
+                        <img data-src="Showcase_Veterinary/veterinary-11.png" alt="11">
+                        <img data-src="Showcase_Veterinary/veterinary-12.png" alt="12">
+                        <img data-src="Showcase_Veterinary/veterinary-13.png" alt="13">
+                        <img data-src="Showcase_Veterinary/veterinary-14.png" alt="14">
+                        <img data-src="Showcase_Veterinary/veterinary-15.png" alt="15">
+                        <img data-src="Showcase_Veterinary/veterinary-16.png" alt="16">
+                    </div>
+                </div>
+
+                <!-- Hydroponics -->
+                <div class="project-card">
+                    <a href="#" class="project-thumb-link" data-gallery-trigger data-gallery="hydroponics">
+                        <div class="project-thumb-wrap">
+                            <img class="project-thumb" src="Showcase_Hydroponics/hydroponics-dashboard.png" alt="Hydroponics Dashboard">
+                            <div class="project-thumb-overlay"><i class="fas fa-images"></i> View Gallery</div>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3>Solar Hydroponics Web App</h3>
+                        <p class="description">A React web app with a Python/Flask API for real-time greenhouse monitoring — dashboard analytics, hardware status, inventory, crop tracking, and sales reports.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Python / Flask</span>
+                            <span>IoT</span>
+                            <a href="#" class="tag-btn" data-gallery-trigger data-gallery="hydroponics"><i class="fas fa-images"></i> Gallery</a>
+                        </div>
+                    </div>
+                    <div class="hydroponics-gallery" style="display:none;">
+                        <img data-src="Showcase_Hydroponics/hydroponics-dashboard.png" alt="dashboard">
+                        <img data-src="Showcase_Hydroponics/hydroponics-graph.png" alt="graph">
+                        <img data-src="Showcase_Hydroponics/hydroponics-hardwarestatus.png" alt="hardware status">
+                        <img data-src="Showcase_Hydroponics/hydroponics-hardwarecomponent.png" alt="hardware component">
+                        <img data-src="Showcase_Hydroponics/hydroponics-logs.png" alt="logs">
+                        <img data-src="Showcase_Hydroponics/hydroponics-login.png" alt="login">
+                        <img data-src="Showcase_Hydroponics/hydroponics-inventoryitem1.png" alt="inventory1">
+                        <img data-src="Showcase_Hydroponics/hydroponics-inventoryitem2.png" alt="inventory2">
+                        <img data-src="Showcase_Hydroponics/hydroponics-plantedcrops2.png" alt="planted crops">
+                        <img data-src="Showcase_Hydroponics/hydroponics-planterdcrops1.png" alt="planter crops">
+                        <img data-src="Showcase_Hydroponics/hydroponics-harvest.png" alt="harvest">
+                        <img data-src="Showcase_Hydroponics/hydroponics-sales.png" alt="sales">
+                        <img data-src="Showcase_Hydroponics/hydroponics-rejected.png" alt="rejected">
+                        <img data-src="Showcase_Hydroponics/hydroponics-maintenance.png" alt="maintenance">
+                        <img data-src="Showcase_Hydroponics/hydroponics-usermanagement.png" alt="user management">
+                    </div>
+                </div>
+
+                <!-- Excel ETL Project -->
+                <div class="project-card">
+                    <a href="https://github.com/GieExe/Excel" target="_blank" class="project-thumb-link" data-gallery-trigger data-gallery="excel">
+                        <div class="project-thumb-wrap">
+                            <img class="project-thumb" src="Showcase_Excel/excel-1.png" alt="Excel ETL">
+                            <div class="project-thumb-overlay"><i class="fab fa-github"></i> View Repository</div>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3>Excel — Automated ETL Pipeline</h3>
+                        <p class="description">An automated ETL pipeline built in C# for reading Excel data and inserting it into a relational database.</p>
+                        <div class="project-tags">
+                            <span>C#</span>
+                            <span>ETL</span>
+                            <span>SQL</span>
+                            <a href="https://github.com/GieExe/Excel" target="_blank" class="tag-btn tag-btn--live"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="tag-btn" data-gallery-trigger data-gallery="excel"><i class="fas fa-images"></i> Gallery</a>
+                        </div>
+                    </div>
+                    <div class="excel-gallery" style="display:none;">
+                        <img data-src="Showcase_Excel/excel-1.png" alt="Excel 1">
+                    </div>
+                </div>
+
+                <!-- Ingredients Project -->
+                <div class="project-card">
+                    <a href="https://github.com/GieExe/Ingredients" target="_blank" class="project-thumb-link" data-gallery-trigger data-gallery="ingredients">
+                        <div class="project-thumb-wrap">
+                            <img class="project-thumb" src="Showcase_Ingredients/ingredients-1.png" alt="Ingredients Cover">
+                            <div class="project-thumb-overlay"><i class="fab fa-github"></i> View Repository</div>
+                        </div>
+                    </a>
+                    <div class="project-content">
+                        <h3>Ingredients — Data Entry & Validation</h3>
+                        <p class="description">A C# data entry and validation system that checks for duplicates and manages complex relational inserts into a database.</p>
+                        <div class="project-tags">
+                            <span>C#</span>
+                            <span>Validation</span>
+                            <span>SQL</span>
+                            <a href="https://github.com/GieExe/Ingredients" target="_blank" class="tag-btn tag-btn--live"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="tag-btn" data-gallery-trigger data-gallery="ingredients"><i class="fas fa-images"></i> Gallery</a>
+                        </div>
+                    </div>
+                    <div class="ingredients-gallery" style="display:none;">
+                        <img data-src="Showcase_Ingredients/ingredients-1.png" alt="1">
+                        <img data-src="Showcase_Ingredients/ingredients-2.png" alt="2">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ===== HOBBY PROJECTS ===== -->
+    <section id="hobby-projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Hobby Projects</h2>
+
+            <div class="hobby-grid">
+                <div class="hobby-feature">
+                    <div class="project-card project-card--large">
+                        <a href="#" class="project-thumb-link" data-gallery-trigger data-gallery="barnyard">
+                            <div class="project-thumb-wrap">
+                                <img class="project-thumb" src="Showcase_Barnyard/barnyard-1.png" alt="Barnyard Cover">
+                                <div class="project-thumb-overlay"><i class="fas fa-images"></i> View Gallery</div>
+                            </div>
+                        </a>
+                        <div class="project-content">
+                            <h3>Barnyard Defenders</h3>
+                            <p class="description">A high-fidelity animal-themed Tower Defense web game with Gacha summoning, rarity variants (Normal / Golden / Rainbow), boss waves, and a real-time HTML5 Canvas engine. Polished visuals and responsive controls.</p>
+                            <div class="project-tags">
+                                <span>Vanilla JS</span>
+                                <span>HTML5 Canvas</span>
+                                <span>Game Dev</span>
+                            </div>
+                            <div class="hobby-meta">
+                                <div class="hobby-stats">
+                                    <div><strong>Play Time</strong><span>— 10–15 min/session</span></div>
+                                    <div><strong>Progress</strong><span>— v1.3 (stable)</span></div>
+                                    <div><strong>Platforms</strong><span>— Desktop / Mobile</span></div>
+                                </div>
+                                <div class="hobby-actions">
+                                    <a href="https://animals-rust-ten.vercel.app/" target="_blank" class="tag-btn tag-btn--live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                    <a href="#" class="tag-btn" data-gallery-trigger data-gallery="barnyard"><i class="fas fa-images"></i> Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="barnyard-gallery" style="display:none;">
+                            <img data-src="Showcase_Barnyard/barnyard-1.png" alt="1">
+                            <img data-src="Showcase_Barnyard/barnyard-2.png" alt="2">
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="hobby-aside">
+                    <div class="aside-card">
+                        <h4 class="aside-title">Barnyard Quick Info</h4>
+                        <p class="aside-desc">Short, playable tower-defense with collectible mechanics and progressive upgrades. Great for demonstrations of game loops, canvas optimizations, and responsive input handling.</p>
+                        <ul class="aside-list">
+                            <li><strong>Engine:</strong> HTML5 Canvas</li>
+                            <li><strong>Language:</strong> JavaScript</li>
+                            <li><strong>UI:</strong> Tailwind + custom CSS</li>
+                        </ul>
+                        <div class="aside-links">
+                            <a class="tag-btn" href="https://animals-rust-ten.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Play Now</a>
+                            <a class="tag-btn" href="#barnyard-details"><i class="fas fa-info-circle"></i> Read Details</a>
+                        </div>
+                    </div>
+
+                    <details class="barnyard-details" id="barnyard-details">
+                        <summary>Barnyard Defenders — Full Project Details</summary>
+                        <div class="barnyard-details-body">
+                            <p>Barnyard Defenders is a high-fidelity, animal-themed Tower Defense (TD) web application combining classic strategy gameplay with modern Gacha collection mechanics and a progressive upgrade system.</p>
+                            <h4>Core Gameplay Loop</h4>
+                            <p>Prevent waves of invasive insects from reaching the homestead by strategically placing animal defenders along a winding path.</p>
+                            <h4>Key Systems</h4>
+                            <ul>
+                                <li><strong>Gacha Summoning</strong>: Spend "Acorns" to pull random units, forcing adaptive strategy.</li>
+                                <li><strong>1x &amp; 5x Summons</strong>: Single or bulk pulls for faster army building.</li>
+                                <li><strong>Rarity Variants</strong>: Normal (89%), Golden (10% — 1.5x stats), Rainbow (1% — 2.5x stats + RGB visuals).</li>
+                                <li><strong>Boss Waves</strong>: Every 5th wave features a high-HP "Big Bad Wolf" boss.</li>
+                                <li><strong>Economy</strong>: Balance acorns between new summons, Level 3 upgrades, or selling weak variants.</li>
+                            </ul>
+                            <h4>Technical Specs</h4>
+                            <ul>
+                                <li><strong>Single-file</strong> vanilla JS + HTML5 Canvas + Tailwind CSS.</li>
+                                <li>Particle systems, dynamic shadows, bobbing animations, rotation logic.</li>
+                                <li>2x Fast Forward mode with consistent frame rate.</li>
+                                <li>Fully responsive with touch-friendly controls.</li>
+                            </ul>
+                            <h4>Defender Roster</h4>
+                            <ul>
+                                <li><strong>Common</strong>: Chicken (Rapid Fire), Sheep (Balanced).</li>
+                                <li><strong>Rare</strong>: Pig (Heavy Hitter), Dog (High Speed).</li>
+                                <li><strong>Epic / Legendary</strong>: Cow (Sniper), Horse (Extreme Performance).</li>
+                            </ul>
+                        </div>
+                    </details>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Objective &amp; Profile</h2>
+            <div class="about-card">
+                <p class="mb-4">Full-Stack Systems Engineer specializing in hardware-integrated tracking solutions. I manage the complete lifecycle: planning architecture, optimizing hardware SDKs, handling project costing, and executing final deployment to ensure seamless, reliability-focused operations. <strong>Currently seeking part-time remote Web Developer roles.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience" class="section">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
@@ -66,10 +317,10 @@
                 <div class="timeline-item">
                     <i class="fas fa-briefcase"></i>
                     <div class="timeline-content">
-                        <h3>Lead Systems Integration Engineer (Gov't Projects)</h3>
+                        <h3>Full Stack Developer</h3>
                         <p class="company">Spark Innovative Tech | Full-time</p>
                         <p class="date">Sep 2025 - Present (6 mos)</p>
-                        <p class="description">Systems Integration Engineer and Solutions Architect with a track record of delivering high-stakes infrastructure projects. I successfully architected and deployed a comprehensive Enterprise Tracking System (C#/.NET) for major national government agencies within an accelerated 5-month timeline. My expertise bridges the gap between software and industrial hardware, featuring advanced skills in re-engineering complex IoT sensor SDKs for stability, conducting industrial-grade stress testing, and leading technical presales for competitive government bidding.</p>
+                        <p class="description">Systems Integration Engineer and Solutions Architect with a track record of delivering high-stakes infrastructure projects. Successfully architected and deployed a comprehensive Enterprise Tracking System (C#/.NET) for major national government agencies within an accelerated 5-month timeline. Expertise bridges software and industrial hardware, with advanced skills in re-engineering IoT sensor SDKs, conducting industrial-grade stress testing, and leading technical presales for government bidding.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -78,13 +329,14 @@
                         <h3>Software Developer</h3>
                         <p class="company">Comptrolla Technologies, Inc. | Internship</p>
                         <p class="date">Sep 2024 - Apr 2025 (8 mos)</p>
-                        <p class="description">Windows Application Developer and Mobile Application Developer For Businesses. Focus on C#, .NET, and application scalability.</p>
+                        <p class="description">Windows Application Developer and Mobile Application Developer for businesses. Focus on C#, .NET, and application scalability.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== EDUCATION ===== -->
     <section id="education" class="section">
         <div class="container">
             <h2 class="section-title">Education</h2>
@@ -117,9 +369,10 @@
         </div>
     </section>
 
+    <!-- ===== CERTIFICATIONS ===== -->
     <section id="certifications" class="section">
         <div class="container">
-            <h2 class="section-title">Certifications & Diplomas</h2>
+            <h2 class="section-title">Certifications &amp; Diplomas</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Certificates</h3>
@@ -136,9 +389,10 @@
         </div>
     </section>
 
+    <!-- ===== SKILLS ===== -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
+            <h2 class="section-title">Skills &amp; Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Technical Skills</h3>
@@ -153,7 +407,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Hardware</h3>
+                    <h3>Tools &amp; Hardware</h3>
                     <ul>
                         <li>Visual Studio / VS Code</li>
                         <li>IoT Sensor SDKs</li>
@@ -163,7 +417,7 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Management & Soft Skills</h3>
+                    <h3>Management &amp; Soft Skills</h3>
                     <ul>
                         <li>Project Management</li>
                         <li>Technical Presales</li>
@@ -176,56 +430,7 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>SparkTrack - Document and Asset Tracking</h3>
-                        <p class="description">Architected an advanced real-time tracking system that automatically monitors the location of objects across rooms. Features seamless integration with various hardware sensors for precise asset management.</p>
-                        <div class="project-tags">
-                            <span>C# / .NET</span>
-                            <span>IoT Integration</span>
-                            <span>Real-time Tracking</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Veterinary Pet Shop Management</h3>
-                        <p class="description">Developed a VB.NET system streamlining operations for clinics, integrating appointments, medical records, and inventory.</p>
-                        <div class="project-tags">
-                            <span>VB.NET</span>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Cleaning Services System</h3>
-                        <p class="description">Architected software enhancing operational efficiency for cleaning service businesses using VB.NET.</p>
-                        <div class="project-tags">
-                            <span>VB.NET</span>
-                            <span>Business Logic</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Solar Hydroponics Android App</h3>
-                        <p class="description">Developed a React Native app with a Python/Flask API to monitor greenhouse metrics in real-time.</p>
-                        <div class="project-tags">
-                            <span>React Native</span>
-                            <span>Python</span>
-                            <span>IoT</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Contact</h2>
