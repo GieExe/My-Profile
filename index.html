@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
     <div class="bg-glow"></div>
@@ -35,12 +35,34 @@
                     <img id="hero-photo" src="https://i.imgur.com/fzONmaQ.jpg" alt="Giebert Delotavo" loading="lazy" aria-hidden="true">
                 </div>
                 <div class="hero-text">
+                    <p class="hero-kicker">Portfolio / Systems / Web Products</p>
                     <h1>Giebert R. Delotavo</h1>
-                    <p class="subtitle">Full Stack Developer</p>
+                    <p class="subtitle">Full Stack Developer building enterprise systems, data workflows, and polished web experiences.</p>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> 2340 Kapatiran Street, Barangay Commonwealth, Quezon City</p>
+                    <p class="hero-summary">I ship practical software across C#/.NET, Python, React, SQL, and IoT-connected platforms, from government-ready tracking systems to analytics dashboards, ETL tooling, and interactive browser products.</p>
+                    <div class="hero-highlights">
+                        <span>Enterprise Tracking</span>
+                        <span>React + Flask Dashboards</span>
+                        <span>ETL &amp; Data Validation</span>
+                        <span>HTML5 Interactive Apps</span>
+                    </div>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn primary">Get in Touch</a>
                         <a href="#projects" class="btn secondary">View Projects</a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric-card">
+                            <strong>7+</strong>
+                            <span>portfolio builds across web, desktop, and systems work</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>C# / React / Python</strong>
+                            <span>core stack used across production and personal projects</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>Available for remote work</strong>
+                            <span>best fit for full stack, web app, and systems-focused roles</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -267,6 +289,50 @@
                                         <a href="#" class="tag-btn" data-gallery-trigger data-gallery="barnyard"><i class="fas fa-images"></i> Gallery</a>
                                     </div>
                                 </div>
+
+                                <div class="hobby-info-card">
+                                    <h4 class="aside-title">Barnyard Quick Info</h4>
+                                    <p class="aside-desc">Short, playable tower-defense with collectible mechanics and progressive upgrades. Great for demonstrations of game loops, canvas optimizations, and responsive input handling.</p>
+                                    <ul class="aside-list">
+                                        <li><strong>Engine:</strong> HTML5 Canvas</li>
+                                        <li><strong>Language:</strong> JavaScript</li>
+                                        <li><strong>UI:</strong> Tailwind + custom CSS</li>
+                                    </ul>
+                                    <div class="aside-links">
+                                        <a class="tag-btn" href="https://animals-rust-ten.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Play Now</a>
+                                        <a class="tag-btn" href="#barnyard-details"><i class="fas fa-info-circle"></i> Read Details</a>
+                                    </div>
+                                </div>
+
+                                <details class="barnyard-details" id="barnyard-details">
+                                    <summary>Barnyard Defenders — Full Project Details</summary>
+                                    <div class="barnyard-details-body">
+                                        <p>Barnyard Defenders is a high-fidelity, animal-themed Tower Defense (TD) web application combining classic strategy gameplay with modern Gacha collection mechanics and a progressive upgrade system.</p>
+                                        <h4>Core Gameplay Loop</h4>
+                                        <p>Prevent waves of invasive insects from reaching the homestead by strategically placing animal defenders along a winding path.</p>
+                                        <h4>Key Systems</h4>
+                                        <ul>
+                                            <li><strong>Gacha Summoning</strong>: Spend "Acorns" to pull random units, forcing adaptive strategy.</li>
+                                            <li><strong>1x &amp; 5x Summons</strong>: Single or bulk pulls for faster army building.</li>
+                                            <li><strong>Rarity Variants</strong>: Normal (89%), Golden (10% — 1.5x stats), Rainbow (1% — 2.5x stats + RGB visuals).</li>
+                                            <li><strong>Boss Waves</strong>: Every 5th wave features a high-HP "Big Bad Wolf" boss.</li>
+                                            <li><strong>Economy</strong>: Balance acorns between new summons, Level 3 upgrades, or selling weak variants.</li>
+                                        </ul>
+                                        <h4>Technical Specs</h4>
+                                        <ul>
+                                            <li><strong>Single-file</strong> vanilla JS + HTML5 Canvas + Tailwind CSS.</li>
+                                            <li>Particle systems, dynamic shadows, bobbing animations, rotation logic.</li>
+                                            <li>2x Fast Forward mode with consistent frame rate.</li>
+                                            <li>Fully responsive with touch-friendly controls.</li>
+                                        </ul>
+                                        <h4>Defender Roster</h4>
+                                        <ul>
+                                            <li><strong>Common</strong>: Chicken (Rapid Fire), Sheep (Balanced).</li>
+                                            <li><strong>Rare</strong>: Pig (Heavy Hitter), Dog (High Speed).</li>
+                                            <li><strong>Epic / Legendary</strong>: Cow (Sniper), Horse (Extreme Performance).</li>
+                                        </ul>
+                                    </div>
+                                </details>
                             </div>
                             <div class="barnyard-gallery" style="display:none;">
                                 <img data-src="Showcase_Barnyard/barnyard-1.png" alt="1">
@@ -300,52 +366,6 @@
                         </div>
                     </div>
                 </div>
-
-                <aside class="hobby-aside">
-                    <div class="aside-card">
-                        <h4 class="aside-title">Barnyard Quick Info</h4>
-                        <p class="aside-desc">Short, playable tower-defense with collectible mechanics and progressive upgrades. Great for demonstrations of game loops, canvas optimizations, and responsive input handling.</p>
-                        <ul class="aside-list">
-                            <li><strong>Engine:</strong> HTML5 Canvas</li>
-                            <li><strong>Language:</strong> JavaScript</li>
-                            <li><strong>UI:</strong> Tailwind + custom CSS</li>
-                        </ul>
-                        <div class="aside-links">
-                            <a class="tag-btn" href="https://animals-rust-ten.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Play Now</a>
-                            <a class="tag-btn" href="#barnyard-details"><i class="fas fa-info-circle"></i> Read Details</a>
-                        </div>
-                    </div>
-
-                    <details class="barnyard-details" id="barnyard-details">
-                        <summary>Barnyard Defenders — Full Project Details</summary>
-                        <div class="barnyard-details-body">
-                            <p>Barnyard Defenders is a high-fidelity, animal-themed Tower Defense (TD) web application combining classic strategy gameplay with modern Gacha collection mechanics and a progressive upgrade system.</p>
-                            <h4>Core Gameplay Loop</h4>
-                            <p>Prevent waves of invasive insects from reaching the homestead by strategically placing animal defenders along a winding path.</p>
-                            <h4>Key Systems</h4>
-                            <ul>
-                                <li><strong>Gacha Summoning</strong>: Spend "Acorns" to pull random units, forcing adaptive strategy.</li>
-                                <li><strong>1x &amp; 5x Summons</strong>: Single or bulk pulls for faster army building.</li>
-                                <li><strong>Rarity Variants</strong>: Normal (89%), Golden (10% — 1.5x stats), Rainbow (1% — 2.5x stats + RGB visuals).</li>
-                                <li><strong>Boss Waves</strong>: Every 5th wave features a high-HP "Big Bad Wolf" boss.</li>
-                                <li><strong>Economy</strong>: Balance acorns between new summons, Level 3 upgrades, or selling weak variants.</li>
-                            </ul>
-                            <h4>Technical Specs</h4>
-                            <ul>
-                                <li><strong>Single-file</strong> vanilla JS + HTML5 Canvas + Tailwind CSS.</li>
-                                <li>Particle systems, dynamic shadows, bobbing animations, rotation logic.</li>
-                                <li>2x Fast Forward mode with consistent frame rate.</li>
-                                <li>Fully responsive with touch-friendly controls.</li>
-                            </ul>
-                            <h4>Defender Roster</h4>
-                            <ul>
-                                <li><strong>Common</strong>: Chicken (Rapid Fire), Sheep (Balanced).</li>
-                                <li><strong>Rare</strong>: Pig (Heavy Hitter), Dog (High Speed).</li>
-                                <li><strong>Epic / Legendary</strong>: Cow (Sniper), Horse (Extreme Performance).</li>
-                            </ul>
-                        </div>
-                    </details>
-                </aside>
             </div>
         </div>
     </section>
@@ -354,8 +374,25 @@
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">Objective &amp; Profile</h2>
-            <div class="about-card">
-                <p class="mb-4">Full-Stack Systems Engineer specializing in hardware-integrated tracking solutions. I manage the complete lifecycle: planning architecture, optimizing hardware SDKs, handling project costing, and executing final deployment to ensure seamless, reliability-focused operations. <strong>Currently seeking part-time remote Web Developer roles.</strong></p>
+            <div class="about-layout">
+                <div class="about-card about-card--lead">
+                    <p>I am a full stack developer with hands-on experience delivering production software in business and government environments. My work spans backend systems, data processing, frontend interfaces, and hardware-connected deployments, which is the same range reflected in the projects on this site.</p>
+                    <p>That mix matters: SparkTrack shows enterprise architecture and IoT integration, Hydroponics shows full-stack dashboard development, Excel and Ingredients show data automation discipline, and Barnyard Defenders shows product thinking on the frontend. <strong>I am currently targeting remote roles where I can build reliable web applications and end-to-end software products.</strong></p>
+                </div>
+                <div class="about-summary-grid">
+                    <article class="summary-card">
+                        <h3>What I Build</h3>
+                        <p>Internal systems, operational dashboards, admin tools, data pipelines, and portfolio-grade browser experiences.</p>
+                    </article>
+                    <article class="summary-card">
+                        <h3>How I Work</h3>
+                        <p>I prefer clear architecture, measurable output, fast iteration, and solutions that are stable enough for real users and real operations.</p>
+                    </article>
+                    <article class="summary-card">
+                        <h3>Role Fit</h3>
+                        <p>Strong fit for full stack developer, web developer, systems developer, and software engineer roles with practical ownership.</p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
@@ -371,7 +408,7 @@
                         <h3>Full Stack Developer</h3>
                         <p class="company">Spark Innovative Tech | Full-time</p>
                         <p class="date">Sep 2025 - Present (6 mos)</p>
-                        <p class="description">Systems Integration Engineer and Solutions Architect with a track record of delivering high-stakes infrastructure projects. Successfully architected and deployed a comprehensive Enterprise Tracking System (C#/.NET) for major national government agencies within an accelerated 5-month timeline. Expertise bridges software and industrial hardware, with advanced skills in re-engineering IoT sensor SDKs, conducting industrial-grade stress testing, and leading technical presales for government bidding.</p>
+                        <p class="description">Lead delivery for an enterprise tracking platform built with C#/.NET, including architecture planning, backend workflows, hardware SDK integration, deployment coordination, and technical support for national government clients. The work combines software engineering, systems reliability, and stakeholder-facing execution under tight timelines.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -380,7 +417,7 @@
                         <h3>Software Developer</h3>
                         <p class="company">Comptrolla Technologies, Inc. | Internship</p>
                         <p class="date">Sep 2024 - Apr 2025 (8 mos)</p>
-                        <p class="description">Windows Application Developer and Mobile Application Developer for businesses. Focus on C#, .NET, and application scalability.</p>
+                        <p class="description">Built and supported Windows and mobile business applications with focus on C#, .NET, database-connected workflows, and maintainable feature delivery. This role strengthened my foundation in business software, application structure, and practical implementation speed.</p>
                     </div>
                 </div>
             </div>
@@ -446,35 +483,40 @@
             <h2 class="section-title">Skills &amp; Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Technical Skills</h3>
+                    <h3>Backend &amp; Systems</h3>
                     <ul>
                         <li>C# / .NET</li>
                         <li>Python</li>
-                        <li>Java</li>
                         <li>SQL</li>
                         <li>VB.NET</li>
-                        <li>React Native</li>
-                        <li>Web Development</li>
+                        <li>Java</li>
+                        <li>API Integration</li>
+                        <li>Data Processing</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools &amp; Hardware</h3>
+                    <h3>Frontend &amp; Product</h3>
+                    <ul>
+                        <li>HTML / CSS / JavaScript</li>
+                        <li>React</li>
+                        <li>Responsive UI</li>
+                        <li>Dashboard Design</li>
+                        <li>Game UI / Canvas</li>
+                        <li>UX-minded Delivery</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools, Hardware &amp; Delivery</h3>
                     <ul>
                         <li>Visual Studio / VS Code</li>
                         <li>IoT Sensor SDKs</li>
                         <li>Postman / PyCharm</li>
                         <li>AI Tools (Gemini, ChatGPT)</li>
-                        <li>Computer Troubleshooting</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Management &amp; Soft Skills</h3>
-                    <ul>
                         <li>Project Management</li>
                         <li>Technical Presales</li>
                         <li>Project Costing</li>
                         <li>Problem Solving</li>
-                        <li>Good Listener</li>
+                        <li>Computer Troubleshooting</li>
                     </ul>
                 </div>
             </div>
@@ -487,7 +529,23 @@
             <h2 class="section-title">Contact</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <p>Interested in working together? Feel free to reach out via LinkedIn or my professional channels.</p>
+                    <div class="contact-card">
+                        <p class="contact-intro">Interested in building a web app, internal platform, dashboard, or operations-focused product? That is the type of work I am pursuing.</p>
+                        <div class="contact-points">
+                            <div>
+                                <strong>Best fit roles</strong>
+                                <span>Full Stack Developer, Web Developer, Software Engineer</span>
+                            </div>
+                            <div>
+                                <strong>Preferred setup</strong>
+                                <span>Remote or hybrid teams with practical product ownership</span>
+                            </div>
+                            <div>
+                                <strong>Strengths</strong>
+                                <span>Reliable delivery, cross-stack execution, and systems thinking</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/giebert-delotavo/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="https://github.com/GieExe" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -495,6 +553,7 @@
                     </div>
                 </div>
                 <form id="contact-form" class="contact-form">
+                    <p class="contact-form-title">Send a quick message</p>
                     <div class="form-group">
                         <input type="text" placeholder="Name" required>
                     </div>

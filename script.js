@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Nav Scroll Effect
     const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-open');
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu) {
+                navMenu.classList.remove('nav-open');
+            }
+        });
+    });
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.padding = '10px 0';
@@ -63,12 +81,34 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const sectionObserver = new IntersectionObserver(fadeInEntries, observerOptions);
-    document.querySelectorAll('.section, .about-card, .timeline-content, .skill-category').forEach(el => {
+    document.querySelectorAll('.section, .about-card, .summary-card, .timeline-content, .skill-category, .contact-card, .contact-form').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
         sectionObserver.observe(el);
     });
+
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const updateActiveNav = () => {
+        const scrollPosition = window.scrollY + 120;
+
+        sections.forEach(section => {
+            const start = section.offsetTop;
+            const end = start + section.offsetHeight;
+            const targetLink = document.querySelector(`nav a[href="#${section.id}"]`);
+
+            if (!targetLink) return;
+
+            if (scrollPosition >= start && scrollPosition < end) {
+                targetLink.classList.add('active');
+            } else {
+                targetLink.classList.remove('active');
+            }
+        });
+    };
+
+    updateActiveNav();
+    window.addEventListener('scroll', updateActiveNav);
 
     // Subtitle reveal effect
     const subtitle = document.querySelector('.subtitle');
