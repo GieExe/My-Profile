@@ -699,6 +699,12 @@ footer {
     align-items: start;
 }
 
+.hobby-features {
+    display: grid;
+    gap: 1.5rem;
+    min-width: 0;
+}
+
 .project-card--large { box-shadow: none; }
 .hobby-feature .project-card { border-radius: 14px; overflow: hidden; }
 
@@ -721,8 +727,8 @@ footer {
 
 @media (max-width: 900px) {
     .hobby-grid { grid-template-columns: 1fr; }
+    .hobby-features { order: 1; }
     .hobby-aside { order: 2; }
-    .hobby-feature { order: 1; }
 }
 
 @media (max-width: 640px) {
