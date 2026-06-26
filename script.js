@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (!ticking) {
             requestAnimationFrame(() => {
-                header.style.borderBottomColor = window.scrollY > 50 ? 'rgba(255,122,24,0.15)' : 'var(--border)';
+                header.style.borderBottomColor = window.scrollY > 50 ? 'rgba(212,168,83,0.15)' : 'var(--border)';
                 ticking = false;
             });
             ticking = true;

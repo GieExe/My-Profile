@@ -806,3 +806,211 @@ footer p { margin-bottom: 0.15rem; }
     .project-thumb-overlay { opacity: 1; }
     .hobby-feature .project-card { flex-direction: column; }
 }
+
+/* ===== REFINEMENTS — subtle, not flashy ===== */
+
+/* Better image hover — just a slight scale, not 3D */
+.project-thumb-wrap:hover .project-thumb {
+    transform: scale(1.02);
+    filter: grayscale(0%);
+}
+
+.project-thumb {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Subtle background texture — very faint grain */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.015;
+    pointer-events: none;
+    z-index: 9999;
+    background: repeating-conic-gradient(rgba(255,255,255,0.03) 0% 25%, transparent 0% 50%) 0 0 / 4px 4px;
+}
+
+/* Better project card hover — subtle border color */
+.project-card {
+    transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(212, 168, 83, 0.15);
+}
+
+/* Hero image — subtle hover lift */
+.hero-image img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hero-image:hover img {
+    transform: translateY(-2px);
+    filter: grayscale(20%) contrast(1.05);
+}
+
+/* Better link underline animation */
+.hero-kicker {
+    position: relative;
+}
+
+.hero-kicker::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--primary);
+    opacity: 0.5;
+}
+
+/* Section title — subtle accent line */
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--primary);
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    opacity: 0.6;
+}
+
+/* Better tag hover — subtle background */
+.project-tags span:hover,
+.tag-btn:hover {
+    background: rgba(232, 228, 222, 0.03);
+}
+
+/* Education card — subtle hover */
+.education-card {
+    transition: border-color 0.3s ease;
+}
+
+.education-card:hover {
+    border-color: rgba(212, 168, 83, 0.2);
+}
+
+/* Summary card — subtle hover */
+.summary-card {
+    transition: border-color 0.3s ease;
+}
+
+.summary-card:hover {
+    border-color: rgba(212, 168, 83, 0.2);
+}
+
+/* Operate card — subtle hover */
+.operate-card {
+    transition: border-color 0.3s ease;
+}
+
+.operate-card:hover {
+    border-color: rgba(212, 168, 83, 0.15);
+}
+
+/* Skill item — subtle hover */
+.skill-category li {
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.skill-category li:hover {
+    color: var(--text-primary);
+    padding-left: 0.3rem;
+}
+
+/* Timeline item — subtle left border on hover */
+.timeline-item {
+    padding-left: 0;
+    transition: padding-left 0.3s ease, border-color 0.3s ease;
+    border-left: 2px solid transparent;
+}
+
+.timeline-item:hover {
+    padding-left: 0.8rem;
+    border-left-color: rgba(212, 168, 83, 0.3);
+}
+
+/* Social links — subtle underline on hover */
+.social-links a {
+    position: relative;
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.social-links a:hover::after {
+    width: 100%;
+}
+
+/* Form input — subtle focus glow */
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 1px rgba(212, 168, 83, 0.15);
+}
+
+/* Button — subtle hover transform */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Logo — subtle hover */
+.logo {
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: var(--primary);
+}
+
+/* Better scrollbar (webkit) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(232, 228, 222, 0.1);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(232, 228, 222, 0.2);
+}
+
+/* Selection color */
+::selection {
+    background: rgba(212, 168, 83, 0.3);
+    color: var(--text-primary);
+}
+
+/* Focus visible — keyboard accessibility */
+:focus-visible {
+    outline: 1px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    body::before { display: none; }
+    header { position: static; }
+    .hero { padding-top: 2rem; }
+    .project-thumb-overlay { display: none; }
+    .cta-buttons { display: none; }
+}
