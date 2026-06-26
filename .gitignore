@@ -1,0 +1,6 @@
+node_modules
+build
+.svelte-kit
+.reasonix
+tmp
+.DS_Store
